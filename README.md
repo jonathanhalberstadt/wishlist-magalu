@@ -1,5 +1,5 @@
 
-# 📌 Bancário API
+# 📌 Wishlist API
 
 API RESTful para lista de desejos da Magalu, desenvolvida em Python e Dockerizada para o teste técnico.
 
