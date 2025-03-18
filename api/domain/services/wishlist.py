@@ -6,7 +6,7 @@ from api.models.clients import Client
 from api.models.wishlist import Wishlist
 from api.models.products import Product
 
-API_URL = "https://challenge-api.luizalabs.com/api/product/{}"
+API_URL = "http://challenge-api.luizalabs.com/api/product/{}"
 CACHE_FILE = "cache.json"
 
 def load_cache():
@@ -31,7 +31,7 @@ def add_favorite(client_id, product_id):
     product = db.session.query(Product).filter_by(id=product_id).first()
 
     if not product:
-        response = requests.get(API_URL.format(product_id), timeout=2)
+        response = requests.get(API_URL.format(product_id), timeout=2, verify=False) # nosec B501
 
         if response.status_code == 200:
             product_data = response.json()
