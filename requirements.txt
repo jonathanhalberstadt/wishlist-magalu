@@ -30,4 +30,4 @@ flask_sqlalchemy==3.1.1
 flask_bcrypt==1.0.1
 Flask-Migrate==4.1.0
 psycopg2-binary==2.9.9
-
+bandit==1.7.10

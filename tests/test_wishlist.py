@@ -35,7 +35,7 @@ class WishlistServiceTestCase(unittest.TestCase):
             db.session.commit()
 
             product = Product(id="123", title="Produto Teste",
-                              image="image.jpg", url="http://example.com",
+                              image="image.jpg", url="https://example.com",
                               price=123.45)
 
             db.session.add(product)
@@ -98,7 +98,7 @@ class WishlistServiceTestCase(unittest.TestCase):
         with self.app.app_context():
             client = Client(id=1, name="João da silva", email="joao@exemple.com")
             product = Product(id="123", title="Produto Teste",
-                              image="image.jpg", url="http://example.com",
+                              image="image.jpg", url="https://example.com",
                               price=123.45)
 
             db.session.add(client)
@@ -118,7 +118,7 @@ class WishlistServiceTestCase(unittest.TestCase):
         with self.app.app_context():
             client = Client(id=1, name="João da silva", email="joao@exemple.com")
             product = Product(id="123", title="Produto Teste",
-                              image="image.jpg", url="http://example.com",
+                              image="image.jpg", url="https://example.com",
                               price=123.45)
 
             db.session.add(client)

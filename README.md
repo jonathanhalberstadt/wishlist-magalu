@@ -128,11 +128,18 @@ make test
 ```
 
 ```bash
-php lint
+make lint
+```
+```bash
+make bandit
 ```
 
 ## 📦 Gerenciamento do Container
 
+- **Criar os containers:**
+    ```
+    make build
+    ```
 - **Subir os containers:**
     ```
     make up 

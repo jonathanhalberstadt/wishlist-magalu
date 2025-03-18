@@ -38,3 +38,7 @@ jobs:
       - name: Test with pyunit
         run: |
           python -m unittest discover tests
+
+      - name: Test with Bandit
+        run: |
+          python -m bandit -r . -ll

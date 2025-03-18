@@ -26,6 +26,9 @@ lint:
 test:
 	$(COMPOSE) exec app bash -c "python -m unittest discover tests"
 
+bandit:
+	$(COMPOSE) exec app bash -c "python -m bandit -r . -ll"
+
 logs:
 	docker logs -f wishlist-magalu
 
