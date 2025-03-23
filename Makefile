@@ -29,6 +29,12 @@ test:
 bandit:
 	$(COMPOSE) exec app bash -c "python -m bandit -r . -ll"
 
+sonarqube-start:
+	cd sonarqube && $(COMPOSE) up -d
+
+sonarqube-down:
+	cd sonarqube && $(COMPOSE) down
+
 logs:
 	docker logs -f wishlist-magalu
 
